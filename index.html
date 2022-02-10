@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:ital,wght@0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <!-- end fonts -->
+    <title>Rachel Campbell</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #EEE4E1;
+            margin: 0 auto;
+        }
+        .content {
+            display:grid;
+            grid-template-columns: 100%;
+        }
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            justify-items: right;
+            align-items: center;
+            padding:2rem 5rem;
+        }
+
+        h1 {
+            margin-bottom:-10px;
+            font-family:'Comforter', cursive;
+            font-size:3rem;
+        }
+        .info a {
+            display:block;
+            color:black;
+            margin-bottom:7px;
+        }
+        .info a:hover {
+            background-color: #38E4AE
+        }
+        nav a {
+            background-color: #38E4AE;
+            padding: 5px;
+            color: black;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color:#FF5A5F;
+            color:#EEE4E1;
+            font-style:italic;
+        }
+
+        h2 {
+            font-weight:100;
+            font-style:italic;
+            display: inline-block;
+            border: 2px solid white;
+            padding: 5px;
+        }
+        hr {
+            margin-top:1rem;
+        }
+        
+        section {
+            padding: 3rem;
+        }
+        section:hover {
+            background-color:#254441;
+        }
+        .personality {
+            background-color: #2F9C95;
+            color: #EEE4E1;
+        }
+        .skills {
+            background-color:#664147;
+            color:white;
+        }
+        .work {
+            background-color: #FF5A5F;
+            color:white;
+        }
+
+        .certs {
+            background-color: #40C9A2;
+            color: white;
+        }
+
+        @media only screen and (min-width:750px) {
+         .content{
+                grid-template-columns: 50% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="info">
+            <h1>Rachel Campbell</h1>
+                <a href="mailto:campbellrachelk@gmail.com">campbellrachelk@gmail.com</a>
+                <a href="tel:4104745827">(410)-474-5827</a>
+        </div>
+
+        <nav>
+            <a href="#personality">Personality Summary</a>
+            <a href="#skills">Skills</a>
+            <a href="#work">Work Experience</a>
+            <a href="#certs">Additional Proof of Knowledge</a>
+            <hr/>
+        </nav>
+    </header>
+
+    <div class="content">
+    <section class="personality" id="personality">
+        <h2>Passionate about progress and problem solving</h2>
+        <p>Interests Include:</p>
+        <ul>
+            <li>Building things</li>
+            <li>Podcasts</li>
+            <li>Gardening</li>
+            <li>Traveling</li>
+            <li>Trying new things</li>
+            <li>Organizing and planning</li>
+        </ul>
+    </section><!-- close personality blurb -->
+
+<!-- open skills -->
+<section class="skills" id="skills">
+    <h2 id="skills">Skilled in:</h2>
+    <ul>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>Accessibility</li>
+        <li>CSS</li>
+        <li>Mobile Responsive <em>(actually - mobile first)</em> Design</li>
+        <li>Bootstrap</li>
+        <li>Git</li>
+    </ul>
+</section>
+
+<!-- open work experience section -->
+    <section class="work" id="work">
+        <h2>Work Experience</h2>
+        <article>
+            <details>
+                <summary class="workPlace">NewMarket Group</summary>
+                <p class="jobTitle">Senior FrontEnd Developer</p>
+                
+                <ul class="jobDescription">
+                    <li>Developed static promotion pages and e-commerce funnels using HTML, CSS, JavaScript</li>
+                    <li>Responsible for front-end developer training</li>
+                    <li>Created documentation for front-end practices, including code standard</li>
+                </ul>
+            </details>
+        </article>
+
+        <article>
+            <details>
+            <summary class="workPlace">Stansberry Research</summary>
+            <p class="jobTitle">Member Service Representative</p>
+            <ul class="jobDescription">
+                <li>Customer service primarily via inbound phone calls and e-mail</li>
+                <li>Proposed, implemented, and led company-wide education initiative (Udemy)</li>
+            </ul>
+            </details>
+        </article>
+
+        <article>
+            <details>
+            <summary class="workPlace">Rita's Italian Ice</summary>
+            <p class="jobTitle">Assistant Manager</p>
+            <!-- <ul class="jobDescription">
+                <li></li>
+            </ul> -->
+            </details>
+        </article>
+
+        <article>
+            <details>
+            <summary class="workPlace">International Rescue Committee</summary>
+            <p class="jobTitle">Administrative Intern</p>
+            <!-- <ul class="jobDescription">
+                <li></li>
+            </ul> -->
+            </details>
+        </article>
+    </section>
+<!-- close work experience section-->
+
+<section id="certs" class="certs">
+    <h2>Additional Info</h2>
+    <p class="college">Graduated from Towson University in 2016 with a Bachelor's degree in International Studies &mdash; focus on <em>The Global South</em></p>
+    <p class="edabit">Completed over 100 JavaScript exercises on <a href="edabit.com">edabit.com</a></p>
+    <p class="fcc">Completed Responsive Web Design Certification from <a href="freecodecamp.org">FreeCodeCamp.org</a></p>
+    <p class="fcc">JavaScript Certification from <a href="freecodecamp.org">FreeCodeCamp.org</a> currently in progress</p>
+    <p class="treehouse">Number 1 Organization user on <a href="teamtreehouse.com">teamtreehouse.com</a> with over 750 videos watched (and counting)</p>
+</section>
+</div><!-- close .content -->
+</body>
+</html>
