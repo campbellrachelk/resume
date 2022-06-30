@@ -13,17 +13,9 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #EEE4E1;
             margin: 0 auto;
         }
-        .content {
-            display:grid;
-            grid-template-columns: 100%;
-        }
-        .changed {
-            margin:0 auto;
-            max-width:850px;
-        }
+
         header {
             display: grid;
             grid-template-columns: 1fr;
@@ -37,19 +29,7 @@
             color: #008dff;
             text-shadow: 7px 7px 0px #ff9400;
         }
-        .clickMe {
-            margin: 1rem auto;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 7px #c1c1c1;
-            border: 1px black solid;
-            font-weight:bold;
-        }
-        .clickMe:hover {
-            font-style:italic;
-            background-color:#FF5A5F
-        }
+
         .info a {
             display:block;
             color:black;
@@ -85,33 +65,14 @@
         
         section {
             padding: 3rem;
-            min-height:50vh;
+            min-height:80vh;
         }
         section:hover {
-            background-color:#254441;
-        }
-        .personality {
-            background-color: #2F9C95;
-            color: #EEE4E1;
-        }
-        .skills {
-            background-color:#664147;
-            color:white;
-        }
-        .work {
-            background-color: #FF5A5F;
-            color:white;
-        }
 
-        .certs {
-            background-color: #40C9A2;
-            color: white;
         }
 
         @media only screen and (min-width:750px) {
-         .content{
-                grid-template-columns: 50% 50%;
-            }
+
         header {
             grid-template-columns: auto 1fr;
             justify-items: right;
@@ -143,9 +104,7 @@
         </nav>
     </header>
 
-    <button class="clickMe">View as one-column layout</button>
-
-    <div class="content changeableLayout">
+    <main class="content changeableLayout">
     <section class="personality" id="personality">
         <h2>Passionate about progress and problem solving</h2>
         <p>Interests Include:</p>
@@ -231,24 +190,14 @@
     <p class="treehouse">Number 1 Organization user on <a href="teamtreehouse.com">teamtreehouse.com</a> with over 750 videos watched (and counting)</p>
 </section>
 
-</div><!-- close .content -->
+</main><!-- close .content -->
+
+
+<footer>
+    <p>contact info</p>
+    <p>accessibility statement</p>
+</footer>
 
 </body>
-<script>
-    var clickMe = document.querySelector('.clickMe');
-    var changeableLayout = document.querySelector('.changeableLayout');
-    clickMe.addEventListener('click', function() {
-        if (changeableLayout.classList.contains('content')) { 
-            clickMe.textContent = 'Revert to Grid Layout';
-            changeableLayout.classList.remove('content');
-            changeableLayout.classList.add('changed');
-        } else {
-            clickMe.textContent = 'View as one-column layout';
-            changeableLayout.classList.add('content');
-            changeableLayout.classList.remove('changed');
-        }
-        
-    })
 
-</script>
 </html>
