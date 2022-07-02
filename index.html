@@ -7,13 +7,19 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:ital,wght@0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:ital,wght@0,400;0,700;0,900;1,100&family=Gentium+Book+Plus&display=swap" rel="stylesheet">
     <!-- end fonts -->
     <title>Rachel Campbell</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family:'Gentium Book Plus',serif;
             margin: 0 auto;
+        }
+        ul {
+            list-style-type:none;
         }
 
         header {
@@ -22,7 +28,7 @@
             margin:5px;
         }
 
-        h1 {
+        .name {
             margin-bottom:-10px;
             font-family:'Comforter', cursive;
             font-size:3rem;
@@ -46,18 +52,28 @@
             color: black;
             text-decoration: none;
         }
+        .personality, .interests, .work, .certs {
+            margin:2rem auto;
+            max-width:1000px;
+            text-align:center;
+            display:grid;
+            align-content:center;
+        }
         nav a:hover {
             background-color:#FF5A5F;
             color:#EEE4E1;
             font-style:italic;
         }
-
+        h1 {
+            font-size:5rem;
+        }
         h2 {
-            font-weight:100;
-            font-style:italic;
-            display: inline-block;
             border: 2px solid white;
             padding: 5px;
+            font-size:2rem;
+            color: #ff8787;
+            text-shadow: 5px 5px 0 #ffd600;
+
         }
         hr {
             margin-top:1rem;
@@ -67,10 +83,13 @@
             padding: 3rem;
             min-height:80vh;
         }
-        section:hover {
 
+        .arrowSVG {
+            width: 10%;
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
         }
-
         @media only screen and (min-width:750px) {
 
         header {
@@ -84,29 +103,107 @@
             display:unset;
             margin:unset;
             }
+            
+        .arrowSVG {
+            width: 8%;
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
         }
+        }
+
+
+    /* animations  */
+        .typewriter {
+            overflow:hidden;
+            border-right: 1px solid transparent;
+            /* white-space:nowrap; */
+            /* letter-spacing:.1rem; */
+            /* transition: opacity 1s;
+            opacity:.1; */
+            /* display:inline-block; */
+            text-align:right;
+        }
+
+        /* .typeInstant {
+            animation: typing 3s steps(40,end), blink-caret .5s step-end 5;
+
+        }
+
+        .typeDelay {
+            animation: typing 3s steps(40), blink-caret .5s step-end infinite;
+            animation-delay:3s;
+
+        }
+
+        .typewriter:hover {
+            opacity:1;
+        }
+
+
+        @keyframes typing {
+            from { width:0 } to { width:100%}
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color:orange;}
+            50% { border-color:transparent}
+        } */
+
+        .underline {
+            display: inline-block;
+            padding-bottom:2px;
+            background-image: linear-gradient(orange, orange);
+            background-position: 0 100%; /*OR bottom left*/
+            background-size: 0% 2px;
+            background-repeat: no-repeat;
+        }
+        .fast {
+            transition:
+                background-size 0.3s,
+                background-position 0s 0.3s; /*change after the size immediately*/
+        }
+        .slow {
+            transition:
+                background-size 0.6s,
+                background-position 0s 0.6s; /*change after the size immediately*/
+        }
+
+            .underline:hover {
+            background-position: 100% 100%; /*OR bottom right*/
+            background-size: 100% 2px;
+            }
+
     </style>
 </head>
 <body>
     <header>
         <div class="info">
-            <h1>Rachel Campbell</h1>
+            <p class="name">Rachel Campbell</p>
                 <a href="mailto:campbellrachelk@gmail.com">campbellrachelk@gmail.com</a>
                 <a href="tel:4104745827">(410)-474-5827</a>
         </div>
 
         <nav>
             <a href="#personality">Personality Summary</a>
-            <a href="#skills">Skills</a>
+            <a href="#interests">Interests</a>
             <a href="#work">Work Experience</a>
-            <a href="#certs">Additional Proof of Knowledge</a>
+            <a href="#certs">Continued Learning</a>
             <hr/>
         </nav>
     </header>
 
-    <main class="content changeableLayout">
+    <img class="arrowSVG" src="Untitled.svg" alt="arrow">
+
+    <main class="content">
+        <section class="headline" id="headline">
+
+            <h1 class="typewriter typeInstant">There's <span class="underline fast">more</span> to who you hire than what gets put on a resume</h1>
+            
+        </section><!-- close headline blurb -->
+
     <section class="personality" id="personality">
-        <h2>Passionate about progress and problem solving</h2>
+        <h2 class="underline slow">Passionate about progress and problem solving</h2>
         <p>Interests Include:</p>
         <ul>
             <li>Building things</li>
@@ -118,23 +215,23 @@
         </ul>
     </section><!-- close personality blurb -->
 
-<!-- open skills -->
-<section class="skills" id="skills">
-    <h2 id="skills">Skilled in:</h2>
+<!-- open interests -->
+<section class="interests" id="interests">
+    <h2 class="underline slow">Interests include:</h2>
+
     <ul>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>Accessibility</li>
-        <li>CSS</li>
-        <li>Mobile Responsive <em>(actually - mobile first)</em> Design</li>
-        <li>Bootstrap</li>
-        <li>Git</li>
+        <li>Building things</li>
+        <li>Podcasts</li>
+        <li>Gardening</li>
+        <li>Traveling</li>
+        <li>Trying new things</li>
+        <li>Organizing and planning</li>
     </ul>
 </section>
 
 <!-- open work experience section -->
     <section class="work" id="work">
-        <h2>Work Experience</h2>
+        <h2 class="underline slow">Work Experience</h2>
         <article>
             <details>
                 <summary class="workPlace">NewMarket Group</summary>
@@ -182,7 +279,7 @@
 <!-- close work experience section-->
 
 <section id="certs" class="certs">
-    <h2>Additional Info</h2>
+    <h2 class="underline slow">Additional Info</h2>
     <p class="college">Graduated from Towson University in 2016 with a Bachelor's degree in International Studies &mdash; focus on <em>The Global South</em></p>
     <p class="edabit">Completed over 100 JavaScript exercises on <a href="edabit.com">edabit.com</a></p>
     <p class="fcc">Completed Responsive Web Design Certification from <a href="freecodecamp.org">FreeCodeCamp.org</a></p>
@@ -198,6 +295,26 @@
     <p>accessibility statement</p>
 </footer>
 
+
+<script>
+        // arrowSVG click scroll 
+        let svg = document.querySelector('.arrowSVG');
+        svg.addEventListener('click', scrollEvent);
+
+        function scrollEvent() {
+            let sections = document.querySelectorAll('section');
+            let currentPlace = window.pageYOffset;
+            
+            for (let i=1;i<sections.length;i++) {
+                if (sections[i].offsetTop > currentPlace) {
+                    window.scrollTo(0,sections[i].offsetTop); 
+                    break;
+                }
+            }
+
+        }
+
+</script>
 </body>
 
 </html>
